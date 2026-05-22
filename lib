@@ -1,0 +1,11 @@
+все ресурсы для того чтобы запустить код 
+import os
+import sys
+import json
+import time
+import webbrowser
+import subprocess
+import tkinter as tk
+from tkinter import filedialog, messagebox
+import customtkinter as ctk
+from PIL import Image

@@ -11,7 +11,6 @@ from PIL import Image
 
 CONFIG_FILE = "config_ultra_launcher_v6.json"
 
-# Установка глобальной темной темы
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
@@ -36,7 +35,6 @@ class App(ctk.CTk):
 
         self.load_settings()
 
-        # Контейнер слоев
         self.container = ctk.CTkFrame(self, fg_color="#0e0e10", corner_radius=0)
         self.container.pack(fill="both", expand=True)
         self.container.grid_rowconfigure(0, weight=1)
@@ -267,7 +265,6 @@ class App(ctk.CTk):
         ctk.CTkButton(f_v2, text="Обзор...", font=f_lbl, fg_color="#1f1f24", hover_color="#2b2b36", width=100,
                       height=38, command=self.browse_vpn).pack(side="right")
 
-        # 2. Форма добавления ресурса
         ctk.CTkLabel(scroll_settings, text="Форма создания новой плитки быстрого запуска:", font=f_lbl).pack(anchor="w",
                                                                                                              pady=(10,
                                                                                                                    5))
@@ -312,7 +309,6 @@ class App(ctk.CTk):
         ctk.CTkButton(f_img_row, text="Выбрать иконку", font=f_val, fg_color="#1f1f24", hover_color="#2b2b36",
                       width=110, height=35, command=self.browse_form_image).pack(side="right")
 
-        # Поле названия
         ctk.CTkLabel(form_box, text="Введите название для плитки:", font=f_val, text_color="#88888e").pack(anchor="w",
                                                                                                            padx=15)
 
@@ -334,7 +330,6 @@ class App(ctk.CTk):
                                        corner_radius=12)
         self.list_frame.pack(fill="x", pady=(0, 30))
 
-        # Системные кнопки
         f_btns = ctk.CTkFrame(self.settings_frame, fg_color="transparent")
         f_btns.pack(fill="x", side="bottom", padx=35, pady=20)
         ctk.CTkButton(f_btns, text="Отмена", font=f_lbl, fg_color="#1f1f24", hover_color="#2b2b36", width=120,
